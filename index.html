@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Kiran — With All My Heart 💕</title>
+<title>For Kiran — Something I Need to Say 🌸</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Pinyon+Script&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -156,7 +156,7 @@
     background: linear-gradient(to bottom, rgba(200,80,106,0.8), transparent);
   }
 
-  /* ====== STORY SECTION ====== */
+  /* ====== HONEST SECTION ====== */
   #story {
     background: linear-gradient(160deg, #1a0a0f 0%, #220d14 50%, #1a0a0f 100%);
     gap: 64px;
@@ -265,37 +265,44 @@
     gap: 0;
   }
 
-  .ring-container {
+  /* Emotional Heart */
+  .heart-container {
     position: relative;
-    width: 180px; height: 180px;
+    width: 200px; height: 200px;
     margin: 0 auto 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .ring-outer {
-    width: 180px; height: 180px;
+  /* Soft ripple rings */
+  .heart-ring {
+    position: absolute;
     border-radius: 50%;
-    border: 3px solid rgba(212,168,83,0.4);
-    position: absolute;
-    animation: spin 20s linear infinite;
+    border: 1px solid rgba(200,80,106,0.3);
+    animation: ripple 3s ease-out infinite;
   }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .ring-inner {
-    width: 130px; height: 130px;
-    border-radius: 50%;
-    border: 2px solid rgba(200,80,106,0.5);
-    position: absolute;
-    top: 25px; left: 25px;
-    animation: spin 12s linear infinite reverse;
+  .heart-ring:nth-child(1) { width: 200px; height: 200px; animation-delay: 0s; }
+  .heart-ring:nth-child(2) { width: 160px; height: 160px; animation-delay: 0.8s; }
+  .heart-ring:nth-child(3) { width: 120px; height: 120px; animation-delay: 1.6s; }
+  @keyframes ripple {
+    0%   { transform: scale(0.85); opacity: 0.6; }
+    50%  { opacity: 0.3; }
+    100% { transform: scale(1.1); opacity: 0; }
   }
-  .ring-gem {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 56px;
-    animation: gemglow 2s ease-in-out infinite alternate;
+  .heart-emoji {
+    position: relative;
+    font-size: 64px;
+    z-index: 2;
+    animation: deepbeat 1.4s ease-in-out infinite;
+    filter: drop-shadow(0 0 18px rgba(200,80,106,0.8)) drop-shadow(0 0 40px rgba(200,80,106,0.4));
   }
-  @keyframes gemglow {
-    0%   { text-shadow: 0 0 10px #f7dde4, 0 0 30px #c8506a; filter: brightness(1); }
-    100% { text-shadow: 0 0 20px #f7dde4, 0 0 60px #c8506a, 0 0 100px #d4a853; filter: brightness(1.2); }
+  @keyframes deepbeat {
+    0%   { transform: scale(1);    }
+    15%  { transform: scale(1.28); }
+    30%  { transform: scale(1.05); }
+    45%  { transform: scale(1.18); }
+    60%  { transform: scale(1);    }
+    100% { transform: scale(1);    }
   }
 
   .proposal-text {
@@ -310,9 +317,9 @@
     font-size: 20px;
     font-style: italic;
     font-weight: 300;
-    color: rgba(253,246,240,0.7);
-    max-width: 500px;
-    line-height: 1.8;
+    color: rgba(253,246,240,0.75);
+    max-width: 540px;
+    line-height: 1.9;
     margin-bottom: 56px;
   }
 
@@ -394,8 +401,8 @@
     font-style: italic;
     font-weight: 300;
     color: rgba(253,246,240,0.85);
-    max-width: 500px;
-    line-height: 1.8;
+    max-width: 520px;
+    line-height: 1.9;
     animation: fadeSlideIn 0.8s 0.6s ease forwards;
     opacity: 0;
   }
@@ -478,7 +485,7 @@
 <!-- ===== HERO ===== -->
 <section id="hero">
   <div class="hero-glow"></div>
-  <p class="hero-sub" style="animation-delay:0.2s">A message from the heart of</p>
+  <p class="hero-sub" style="animation-delay:0.2s">Something honest, from</p>
   <div style="font-family:'Pinyon Script',cursive;font-size:clamp(28px,5vw,48px);color:var(--gold);opacity:0;animation:fadeSlideIn 2s 0.5s ease forwards;margin-bottom:8px;">Ratnesh</div>
   <div style="color:rgba(253,246,240,0.2);font-family:'Jost',sans-serif;font-size:12px;letter-spacing:4px;opacity:0;animation:fadeSlideIn 2s 0.8s ease forwards;margin-bottom:12px;">— to —</div>
   <div class="kiran-name" style="animation-delay:1s;">Kiran</div>
@@ -486,100 +493,110 @@
   <div class="scroll-hint" style="opacity:0;animation:fadeSlideIn 2s 2.5s ease forwards,bounce 2s 3s ease-in-out infinite;">scroll</div>
 </section>
 
-<!-- ===== STORY ===== -->
+<!-- ===== HONEST START ===== -->
 <section id="story">
-  <p class="section-label">Our Story</p>
+  <p class="section-label">Let me be real with you</p>
   <div class="story-card">
-    <h2>From the moment I saw you…</h2>
+    <h2>We only know each other online…</h2>
     <p>
-      There are <span class="gold-accent">7 billion people</span> on this earth,
-      and somehow, the universe was kind enough to put
-      <span class="gold-accent">you</span> in my world.<br><br>
-      Every single day with you feels like a poem I never want to finish reading.
-      You are <em>warmth</em>. You are <em>laughter</em>. You are the thought
-      that visits me first thing in the morning and last thing at night.<br><br>
-      You are, <span class="gold-accent">Kiran</span>, everything I never knew
-      I was looking for — and everything I could never stop hoping for.
+      And I'm not going to pretend otherwise.<br><br>
+      We haven't shared the same space. We haven't
+      had chai together or laughed about something
+      silly in person. Everything between us so far
+      has been <span class="gold-accent">through a screen</span>.<br><br>
+      But I'd be lying if I said that what I feel
+      isn't real. The conversations, the way you think,
+      the things you say — they stay with me.
+      You're <em>interesting</em>. You're <em>genuine</em>.
+      And honestly? That's rare.<br><br>
+      So before I say anything else —
+      <span class="gold-accent">this is me being honest with you, Kiran.</span>
+      No exaggeration. No lines I copied from somewhere.
+      Just what I actually feel.
     </p>
   </div>
 </section>
 
 <!-- ===== REASONS ===== -->
 <section id="reasons">
-  <p class="section-label">The reasons are endless, but here are just a few</p>
-  <div class="reasons-title">Why I love you</div>
+  <p class="section-label">Here's why I mean every word</p>
+  <div class="reasons-title">What I genuinely feel</div>
   <div class="ornament">✦ ✦ ✦</div>
   <div class="reasons-grid">
     <div class="reason-item">
       <div class="reason-num">一</div>
-      <div class="reason-text">Your smile can fix everything wrong with my day — before you even say a word.</div>
+      <div class="reason-text">Even through a screen, the way you express yourself tells me something about who you really are — and I like that person.</div>
     </div>
     <div class="reason-item">
       <div class="reason-num">二</div>
-      <div class="reason-text">The way you care for the people you love tells me exactly who you are — and I'm in awe of that person.</div>
+      <div class="reason-text">Talking to you doesn't feel like small talk. And I think that means something.</div>
     </div>
     <div class="reason-item">
       <div class="reason-num">三</div>
-      <div class="reason-text">You make ordinary moments feel like something worth remembering forever.</div>
+      <div class="reason-text">I find myself wanting to know more — not just your highlights, but the actual you.</div>
     </div>
     <div class="reason-item">
       <div class="reason-num">四</div>
-      <div class="reason-text">The world feels softer and braver at the same time when you're beside me.</div>
+      <div class="reason-text">You seem like someone who doesn't need to perform. That kind of realness is something I respect.</div>
     </div>
     <div class="reason-item">
       <div class="reason-num">五</div>
-      <div class="reason-text">You are the only one I want to tell everything to — the good, the messy, and all the in-between.</div>
+      <div class="reason-text">I'd rather say this and find out, than stay quiet and always wonder what could have been.</div>
     </div>
     <div class="reason-item">
       <div class="reason-num">六</div>
-      <div class="reason-text">Loving you is the easiest, most natural thing I have ever done in my life.</div>
+      <div class="reason-text">I'm not saying I know everything about you — I'm saying I want to. And that's new for me.</div>
     </div>
   </div>
 </section>
 
 <!-- ===== PROPOSAL ===== -->
 <section id="proposal">
-  <div class="ring-container">
-    <div class="ring-outer"></div>
-    <div class="ring-inner"></div>
-    <div class="ring-gem">💍</div>
+  <div class="heart-container">
+    <div class="heart-ring"></div>
+    <div class="heart-ring"></div>
+    <div class="heart-ring"></div>
+    <div class="heart-emoji">💗</div>
   </div>
 
-  <p class="section-label">The question my heart has been holding</p>
+  <p class="section-label">Okay. Here it is.</p>
   <div class="proposal-text">
     Kiran,<br>
-    will you be<br>
-    mine — forever?
+    would you like<br>
+    to be mine?
   </div>
   <p class="proposal-sub">
-    I don't promise a perfect life — but I promise to love you fiercely,
-    to hold your hand through every storm, and to make you feel
-    <em>cherished</em> every single day.<br><br>
-    You are my favourite person, my greatest adventure,
-    my home. <span style="color:var(--gold);">Ratnesh</span> is asking,
-    with his whole heart —
+    I'm not asking for anything big or rushed.<br>
+    I'm just asking if you'd give us a chance —
+    to actually get to know each other,
+    to talk more, to see where this goes.<br><br>
+    No pressure. No expectations beyond that.<br>
+    Just two people deciding whether this feeling
+    is worth exploring together.<br><br>
+    <span style="color:var(--gold);">Ratnesh</span> is asking —
+    nervously, genuinely —
   </p>
 
   <div class="btn-group">
-    <button class="btn-yes" onclick="sayYes()">💕 Yes, always yes</button>
-    <button class="btn-no" id="noBtn" onmouseover="runAway(this)" onclick="runAway(this)">Maybe no…</button>
+    <button class="btn-yes" id="yesBtn" onclick="sayYes()">🌸 Yes, let's find out</button>
+    <button class="btn-no" id="noBtn" onmouseover="runAway(this)" onclick="runAway(this)">Not right now…</button>
   </div>
 </section>
 
 <footer>
-  With every heartbeat — Ratnesh 🌹
+  Whatever you decide — thank you for reading this 🌹 Ratnesh
 </footer>
 
 <!-- ===== YES SCREEN ===== -->
 <div id="yes-screen">
-  <div class="yes-emoji">💍</div>
-  <div class="yes-title">She said YES! 🎉</div>
+  <div class="yes-emoji">💗</div>
+  <div class="yes-title">She said yes 🎉</div>
   <p class="yes-message">
-    You've made me the happiest person alive, Kiran.<br>
-    Together, we write the most beautiful story the world has ever seen.
-    I love you — today, tomorrow, always. 💗
+    That honestly just made my entire day, Kiran.<br><br>
+    I don't know exactly where this goes from here —
+    but I'm really glad we're going to find out together. 💗
   </p>
-  <div class="yes-from">— Your Ratnesh 🌹</div>
+  <div class="yes-from">— Ratnesh 🌹</div>
 </div>
 
 <script>
@@ -598,13 +615,13 @@
   function sayYes() {
     const screen = document.getElementById('yes-screen');
     screen.classList.add('active');
-    // Rain hearts
-    const hearts = ['💗','💖','💕','❤️','🌹','✨','💍','💓'];
+    // Rain flowers & hearts
+    const items = ['🌸','💗','💕','🌷','✨','🌹','💖','🥀'];
     for (let i = 0; i < 60; i++) {
       setTimeout(() => {
         const h = document.createElement('div');
         h.className = 'confetti-heart';
-        h.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+        h.textContent = items[Math.floor(Math.random() * items.length)];
         h.style.left = Math.random() * 100 + 'vw';
         h.style.animationDuration = (1.5 + Math.random() * 2) + 's';
         h.style.fontSize = (14 + Math.random() * 24) + 'px';
